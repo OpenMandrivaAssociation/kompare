@@ -32,16 +32,11 @@ Features:
 %{_kde_libdir}/kde4/komparepart.so
 %{_kde_applicationsdir}/kompare.desktop
 %{_kde_appsdir}/kompare
-%{_kde_iconsdir}/hicolor/128x128/apps/kompare.png
-%{_kde_iconsdir}/hicolor/16x16/apps/kompare.png
-%{_kde_iconsdir}/hicolor/22x22/apps/kompare.png
-%{_kde_iconsdir}/hicolor/32x32/apps/kompare.png
-%{_kde_iconsdir}/hicolor/48x48/apps/kompare.png
-%{_kde_iconsdir}/hicolor/scalable/apps/kompare.svgz
 %{_kde_services}/komparenavtreepart.desktop
 %{_kde_services}/komparepart.desktop
 %{_kde_servicetypes}/kompareviewpart.desktop
 %{_kde_servicetypes}/komparenavigationpart.desktop
+%{_kde_iconsdir}/hicolor/*/apps/kompare.*
 %{_kde_docdir}/*/*/kompare
 
 #----------------------------------------------------------------------------
