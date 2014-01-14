@@ -117,7 +117,7 @@ based on Kompare libraries.
 %makeinstall_std -C build
 
 %changelog
-* Tue Jan 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.12.1-1
+* Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.12.1-1
 - New version 4.12.1
 
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.11.4-1
