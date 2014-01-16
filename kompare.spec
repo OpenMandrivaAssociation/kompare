@@ -14,6 +14,7 @@ Url:		http://www.kde.org
 %endif
 Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
+BuildRequires:	libkomparediff2-devel
 
 %description
 Kompare is a GUI front-end program that enables differences between source
@@ -56,21 +57,6 @@ Kompare shared library.
 
 #----------------------------------------------------------------------------
 
-%define komparediff2_major 4
-%define libkomparediff2 %mklibname komparediff2_ %{komparediff2_major}
-
-%package -n %{libkomparediff2}
-Summary:	Kompare shared library
-Group:		System/Libraries
-
-%description -n %{libkomparediff2}
-Kompare shared library.
-
-%files -n %{libkomparediff2}
-%{_kde_libdir}/libkomparediff2.so.%{komparediff2_major}*
-
-#----------------------------------------------------------------------------
-
 %define kompareinterface_major 4
 %define libkompareinterface %mklibname kompareinterface %{kompareinterface_major}
 
@@ -90,7 +76,6 @@ Kompare shared library.
 Summary:	Development files for Kompare
 Group:		Development/KDE and Qt
 Requires:	%{libkomparedialogpages} = %{EVRD}
-Requires:	%{libkomparediff2} = %{EVRD}
 Requires:	%{libkompareinterface} = %{EVRD}
 Conflicts:	kdesdk4-devel < 1:1.4.11.0
 
@@ -101,7 +86,6 @@ based on Kompare libraries.
 %files devel
 %{_kde_includedir}/kompare
 %{_kde_libdir}/libkomparedialogpages.so
-%{_kde_libdir}/libkomparediff2.so
 %{_kde_libdir}/libkompareinterface.so
 
 #----------------------------------------------------------------------------
@@ -119,6 +103,8 @@ based on Kompare libraries.
 %changelog
 * Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.12.1-1
 - New version 4.12.1
+- libkomparediff2 is moved into own package
+- Add libkomparediff2-devel to BuildRequires
 
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.11.4-1
 - New version 4.11.4
