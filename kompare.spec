@@ -1,6 +1,6 @@
 Summary:	A diff graphic tool for KDE
 Name:		kompare
-Version:	15.04.0
+Version:	15.04.1
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -12,8 +12,8 @@ Url:		http://www.kde.org
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs4-devel
+Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	kdelibs-devel
 BuildRequires:	libkomparediff2-devel
 
 %description
