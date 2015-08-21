@@ -1,7 +1,7 @@
 Summary:	A diff graphic tool for KDE
 Name:		kompare
-Version:	15.04.3
-Release:	2
+Version:	15.08.0
+Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -38,21 +38,21 @@ Features:
  - Creating and applying patches
 
 %files
-#%{_kde_bindir}/kompare
-#%{_kde_libdir}/kde4/komparenavtreepart.so
-#%{_kde_libdir}/kde4/komparepart.so
-#%{_kde_applicationsdir}/kompare.desktop
-#%{_kde_appsdir}/kompare
-#%{_kde_services}/komparenavtreepart.desktop
-#%{_kde_services}/komparepart.desktop
-#%{_kde_servicetypes}/kompareviewpart.desktop
-#%{_kde_servicetypes}/komparenavigationpart.desktop
-#%{_kde_iconsdir}/hicolor/*/apps/kompare.*
-#%{_kde_docdir}/*/*/kompare
+%{_bindir}/kompare
+%{_libdir}/qt5/plugins/komparenavtreepart.so
+%{_libdir}/qt5/plugins/komparepart.so
+%{_datadir}/applications/kompare.desktop
+%{_datadir}/kservices5/komparenavtreepart.desktop
+%{_datadir}/kservices5/komparepart.desktop
+%{_datadir}/kservicetypes5/kompareviewpart.desktop
+%{_datadir}/kservicetypes5/komparenavigationpart.desktop
+%{_datadir}/kxmlgui5/kompare
+%{_iconsdir}/hicolor/*/apps/kompare.*
+%doc %{_docdir}/*/*/kompare
 
 #----------------------------------------------------------------------------
 
-%define komparedialogpages_major 4
+%define komparedialogpages_major 5
 %define libkomparedialogpages %mklibname komparedialogpages %{komparedialogpages_major}
 
 %package -n %{libkomparedialogpages}
@@ -63,11 +63,11 @@ Group:		System/Libraries
 Kompare shared library.
 
 %files -n %{libkomparedialogpages}
-#%{_kde_libdir}/libkomparedialogpages.so.%{komparedialogpages_major}*
+%{_libdir}/libkomparedialogpages.so.%{komparedialogpages_major}*
 
 #----------------------------------------------------------------------------
 
-%define kompareinterface_major 4
+%define kompareinterface_major 5
 %define libkompareinterface %mklibname kompareinterface %{kompareinterface_major}
 
 %package -n %{libkompareinterface}
@@ -78,7 +78,7 @@ Group:		System/Libraries
 Kompare shared library.
 
 %files -n %{libkompareinterface}
-#%{_kde_libdir}/libkompareinterface.so.%{kompareinterface_major}*
+%{_libdir}/libkompareinterface.so.%{kompareinterface_major}*
 
 #----------------------------------------------------------------------------
 
@@ -94,9 +94,8 @@ This package includes the header files you will need to compile applications
 based on Kompare libraries.
 
 %files devel
-#%{_kde_includedir}/kompare
-#%{_kde_libdir}/libkomparedialogpages.so
-#%{_kde_libdir}/libkompareinterface.so
+%{_includedir}/kompare
+%{_libdir}/libkompareinterface.so
 
 #----------------------------------------------------------------------------
 
