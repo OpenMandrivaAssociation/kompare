@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kompare-15.08.0.tar.xz: 0d8d981090a28d99ed2241b6d49b8ebe102fbde6
+sources:
+  kompare-15.08.1.tar.xz: d4513f8b10d2b87bd662a0050dee84f615de7be5
