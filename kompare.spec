@@ -41,7 +41,7 @@ Features:
 %{_bindir}/kompare
 %{_libdir}/qt5/plugins/komparenavtreepart.so
 %{_libdir}/qt5/plugins/komparepart.so
-%{_datadir}/applications/kompare.desktop
+%{_datadir}/applications/org.kde.kompare.desktop
 %{_datadir}/kservices5/komparenavtreepart.desktop
 %{_datadir}/kservices5/komparepart.desktop
 %{_datadir}/kservicetypes5/kompareviewpart.desktop
