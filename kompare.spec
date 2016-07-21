@@ -1,6 +1,6 @@
 Summary:	A diff graphic tool for KDE
 Name:		kompare
-Version:	16.04.2
+Version:	16.04.3
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
