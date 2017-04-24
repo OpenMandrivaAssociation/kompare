@@ -1,18 +1,13 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A diff graphic tool for KDE
 Name:		kompare
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
-%define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
-%if %{is_beta}
-%define ftpdir unstable
-%else
-%define ftpdir stable
-%endif
-Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5Codecs)
@@ -37,7 +32,7 @@ Features:
  - Reading diff files
  - Creating and applying patches
 
-%files
+%files -f %{name}.lang
 %{_bindir}/kompare
 %{_libdir}/qt5/plugins/komparenavtreepart.so
 %{_libdir}/qt5/plugins/komparepart.so
@@ -48,7 +43,7 @@ Features:
 %{_datadir}/kservicetypes5/komparenavigationpart.desktop
 %{_datadir}/kxmlgui5/kompare
 %{_iconsdir}/hicolor/*/apps/kompare.*
-%doc %{_docdir}/*/*/kompare
+%{_datadir}/metainfo/*.appdata.xml
 
 #----------------------------------------------------------------------------
 
@@ -108,3 +103,4 @@ based on Kompare libraries.
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
