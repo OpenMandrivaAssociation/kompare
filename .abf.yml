@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kompare-17.12.1.tar.xz: 0cf17f9957991435d5fe57d5ad4276ac757c47f7
+sources:
+  kompare-17.12.2.tar.xz: e0da01b82c558252352d97b078d00fa5093db680
