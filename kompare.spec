@@ -20,6 +20,7 @@ BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(LibKompareDiff2)
 BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	cmake(Qt5PrintSupport)
 
 %description
 Kompare is a GUI front-end program that enables differences between source
