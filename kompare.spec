@@ -2,7 +2,7 @@
 Summary:	A diff graphic tool for KDE
 Name:		kompare
 Version:	 18.12.1
-Release:	1
+Release:	2
 Epoch:		1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -21,6 +21,9 @@ BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(LibKompareDiff2)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(Qt5PrintSupport)
+
+# (crazy) without won't work :)
+Requires: diffutils
 
 %description
 Kompare is a GUI front-end program that enables differences between source
