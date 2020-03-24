@@ -1,0 +1,11 @@
+diff -up kompare-20.03.80/komparepart/kompareconnectwidget.cpp.omv~ kompare-20.03.80/komparepart/kompareconnectwidget.cpp
+--- kompare-20.03.80/komparepart/kompareconnectwidget.cpp.omv~	2020-03-24 01:31:52.661030038 +0100
++++ kompare-20.03.80/komparepart/kompareconnectwidget.cpp	2020-03-24 01:31:58.425087968 +0100
+@@ -21,6 +21,7 @@
+ 
+ #include <QApplication>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QPixmap>
+ #include <QStyle>
+ #include <QTimer>
