@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A diff graphic tool for KDE
 Name:		kompare
-Version:	20.04.3
+Version:	20.07.80
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -48,6 +48,7 @@ Features:
 %{_datadir}/kservicetypes5/komparenavigationpart.desktop
 %{_iconsdir}/hicolor/*/apps/kompare.*
 %{_datadir}/metainfo/*.appdata.xml
+%{_datadir}/qlogging-categories5/kompare.categories
 
 #----------------------------------------------------------------------------
 
