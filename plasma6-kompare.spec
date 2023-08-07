@@ -44,6 +44,7 @@ BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6GlobalAccel)
+BuildRequires:	cmake(KF6TextEditor)
 BuildRequires:	cmake(ECM)
 BuildRequires:	%mklibname -d KF6IconWidgets
 BuildRequires:	plasma6-libkomparediff2-devel
