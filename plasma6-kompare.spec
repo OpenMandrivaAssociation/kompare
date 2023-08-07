@@ -47,7 +47,7 @@ BuildRequires:	cmake(KF6GlobalAccel)
 BuildRequires:	cmake(KF6TextEditor)
 BuildRequires:	cmake(ECM)
 BuildRequires:	%mklibname -d KF6IconWidgets
-BuildRequires:	plasma6-libkomparediff2-devel
+BuildRequires:	%mklibname -d komparediff2-kf6
 # Just to make sure we don't pull in the conflicting Plasma5 package
 BuildRequires:	plasma6-xdg-desktop-portal-kde
 Requires:	diffutils
