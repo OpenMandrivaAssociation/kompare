@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A diff graphic tool for KDE
 Name:		kompare
-Version:	23.04.3
+Version:	23.08.0
 Release:	1
 Epoch:		1
 Group:		Graphical desktop/KDE
@@ -83,7 +83,6 @@ Summary:	Development files for Kompare
 Group:		Development/KDE and Qt
 Requires:	%{libkomparedialogpages} = %{EVRD}
 Requires:	%{libkompareinterface} = %{EVRD}
-Conflicts:	kdesdk4-devel < 1:1.4.11.0
 
 %description devel
 This package includes the header files you will need to compile applications
