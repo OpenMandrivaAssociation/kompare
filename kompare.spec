@@ -2,7 +2,7 @@
 Summary:	A diff graphic tool for KDE
 Name:		kompare
 Version:	23.08.0
-Release:	2
+Release:	3
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
@@ -17,12 +17,20 @@ BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5WidgetsAddons)
-BuildRequires:	libkomparediff2-kf5-devel
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(Qt5PrintSupport)
 
 # (crazy) without won't work :)
 Requires: diffutils
+
+# Make sure we don't accidentally link against
+# Plasma 6 libraries even if they currently share
+# the same filename and soname (which they hopefully
+# won't by the time Plasma 6 is released!)
+BuildRequires:	libkomparediff2-kf5-devel
+Requires:	%{libkomparedialogpages} = %{EVRD}
+Requires:	%{libkompareinterface} = %{EVRD}
+Requires:	%mklibname komparediff2 5
 
 %description
 Kompare is a GUI front-end program that enables differences between source
