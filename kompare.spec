@@ -17,8 +17,7 @@ BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5WidgetsAddons)
-# 5.4.0 uses Qt 6
-BuildRequires:	cmake(LibKompareDiff2) < 5.4.0
+BuildRequires:	libkomparediff2-kf5-devel
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(Qt5PrintSupport)
 
