@@ -23,6 +23,12 @@ BuildRequires:	cmake(Qt5PrintSupport)
 # (crazy) without won't work :)
 Requires: diffutils
 
+%define komparedialogpages_major 5
+%define libkomparedialogpages %mklibname komparedialogpages %{komparedialogpages_major}
+
+%define kompareinterface_major 5
+%define libkompareinterface %mklibname kompareinterface %{kompareinterface_major}
+
 # Make sure we don't accidentally link against
 # Plasma 6 libraries even if they currently share
 # the same filename and soname (which they hopefully
@@ -55,9 +61,6 @@ Features:
 
 #----------------------------------------------------------------------------
 
-%define komparedialogpages_major 5
-%define libkomparedialogpages %mklibname komparedialogpages %{komparedialogpages_major}
-
 %package -n %{libkomparedialogpages}
 Summary:	Kompare shared library
 Group:		System/Libraries
@@ -69,9 +72,6 @@ Kompare shared library.
 %{_libdir}/libkomparedialogpages.so.%{komparedialogpages_major}*
 
 #----------------------------------------------------------------------------
-
-%define kompareinterface_major 5
-%define libkompareinterface %mklibname kompareinterface %{kompareinterface_major}
 
 %package -n %{libkompareinterface}
 Summary:	Kompare shared library
