@@ -2,8 +2,7 @@
 Summary:	A diff graphic tool for KDE
 Name:		kompare
 Version:	23.08.0
-Release:	1
-Epoch:		1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://www.kde.org
@@ -18,7 +17,8 @@ BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5TextEditor)
 BuildRequires:	cmake(KF5WidgetsAddons)
-BuildRequires:	cmake(LibKompareDiff2)
+# 5.4.0 uses Qt 6
+BuildRequires:	cmake(LibKompareDiff2) < 5.4.0
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(Qt5PrintSupport)
 
