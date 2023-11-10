@@ -1,9 +1,9 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define git 20231104
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
+#define git 20231104
 
 Summary:	Graphical tool to display file differences
 Name:		plasma6-kompare
-Version:	23.05.90
+Version:	24.01.75
 Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
 License:	GPLv2 LGPLv2 GFDL
@@ -11,7 +11,7 @@ Url:		http://invent.kde.org/sdk/kompare
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/sdk/kompare/-/archive/master/kompare-master.tar.bz2#/kompare-%{git}.tar.bz2
 %else
-Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kompare-%{version}.tar.xz
 %endif
 BuildRequires:	pkgconfig(icu-uc)
 BuildRequires:	pkgconfig(zlib)
