@@ -1,15 +1,17 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
-#define git 20231104
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Graphical tool to display file differences
 Name:		plasma6-kompare
-Version:	24.01.95
+Version:	24.01.96
 Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
 License:	GPLv2 LGPLv2 GFDL
 Url:		http://invent.kde.org/sdk/kompare
 %if 0%{?git:1}
-Source0:	https://invent.kde.org/sdk/kompare/-/archive/master/kompare-master.tar.bz2#/kompare-%{git}.tar.bz2
+Source0:	https://invent.kde.org/sdk/kompare/-/archive/%{gitbranch}/kompare-%{gitbranchd}.tar.bz2#/kompare-%{git}.tar.bz2
 %else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kompare-%{version}.tar.xz
 %endif
@@ -79,7 +81,7 @@ Features:
 #-----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kompare-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kompare-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DBUILD_QCH:BOOL=ON \
 	-DBUILD_WITH_QT6:BOOL=ON \
