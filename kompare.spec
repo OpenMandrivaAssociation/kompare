@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A diff graphic tool for KDE
 Name:		kompare
-Version:	23.08.5
+Version:	24.05.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
