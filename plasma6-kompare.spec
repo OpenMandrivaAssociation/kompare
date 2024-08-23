@@ -1,11 +1,11 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
-%define git 20240524
+#define git 20240524
 %define gitbranch kf6
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Graphical tool to display file differences
 Name:		plasma6-kompare
-Version:	24.05.0
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
 License:	GPLv2 LGPLv2 GFDL
