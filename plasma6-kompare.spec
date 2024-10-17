@@ -9,7 +9,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
 License:	GPLv2 LGPLv2 GFDL
-Url:		http://invent.kde.org/sdk/kompare
+Url:		https://invent.kde.org/sdk/kompare
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/sdk/kompare/-/archive/%{gitbranch}/kompare-%{gitbranchd}.tar.bz2#/kompare-%{git}.tar.bz2
 %else
