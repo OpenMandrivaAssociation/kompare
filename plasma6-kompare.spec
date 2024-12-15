@@ -5,8 +5,8 @@
 
 Summary:	Graphical tool to display file differences
 Name:		plasma6-kompare
-Version:	24.08.3
-Release:	%{?git:0.%{git}.}2
+Version:	24.12.0
+Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
 License:	GPLv2 LGPLv2 GFDL
 Url:		https://invent.kde.org/sdk/kompare
