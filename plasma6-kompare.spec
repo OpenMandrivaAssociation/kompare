@@ -5,7 +5,7 @@
 
 Summary:	Graphical tool to display file differences
 Name:		plasma6-kompare
-Version:	24.12.1
+Version:	24.12.2
 Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
 License:	GPLv2 LGPLv2 GFDL
