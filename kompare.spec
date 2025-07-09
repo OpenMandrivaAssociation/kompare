@@ -4,7 +4,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Graphical tool to display file differences
-Name:		plasma6-kompare
+Name:		kompare
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
