@@ -5,7 +5,7 @@
 
 Summary:	Graphical tool to display file differences
 Name:		kompare
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
 License:	GPLv2 LGPLv2 GFDL
@@ -54,6 +54,11 @@ BuildRequires:	%mklibname -d komparediff2-kf6
 BuildRequires:	plasma6-xdg-desktop-portal-kde
 Requires:	diffutils
 
+%rename plasma6-kompare
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Kompare is a GUI front-end program that enables differences between source
 files to be viewed and merged. It can be used to compare differences on files
@@ -78,23 +83,6 @@ Features:
 %{_datadir}/metainfo/org.kde.kompare.appdata.xml
 %{_datadir}/qlogging-categories6/kompare.categories
 
-#-----------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kompare-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DQT_MAJOR_VERSION=6 \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-%find_lang %{name} --all-name --with-html
-
+%install -a
 # No need to package -devel, nothing uses internal libraries
 rm -rf %{buildroot}%{_includedir}/kompare %{buildroot}%{_libdir}/*.so
