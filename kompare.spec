@@ -5,7 +5,7 @@
 
 Summary:	Graphical tool to display file differences
 Name:		kompare
-Version:	25.12.3
+Version:	26.04.0
 Release:	%{?git:0.%{git}.}1
 Group:		Development/Tools
 License:	GPLv2 LGPLv2 GFDL
